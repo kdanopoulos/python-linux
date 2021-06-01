@@ -1,0 +1,24 @@
+Askhsh 1
+
+a. cd / ; cat /usr/include/stdio.h
+
+b. cd / ; cut -c 3-6 /usr/include/stdio.h
+
+c. paste <( cut -d'-' -f1 input.4col ) <( cut -d':' -f1 input.4col | cut -d'-' -f2 ) <( cut -d':' -f2 input.4col | cut -d'-' -f1 ) <( cut -d':' -f2 input.4col | cut -d'-' -f2 ) | cat > output.4col
+
+d. sort -n -k 3,3 -k 1,1 output.4col
+
+e. cut -d':' -f1 input.4col | cut -d'-' -f2 | sort -n | head -2
+
+f. cut -d':' -f2 input.4col | cut -d'-' -f2 | sort -nr | head -2
+
+g. paste <( cut -d'-' -f1 input.4col ) <( cut -d':' -f2 input.4col | cut -d'-' -f1) 
+
+h. cd / | cd usr/include | ls -l -a
+
+i. cd / | cd usr/include | find -maxdepth 1 -name "*io*" -exec head -n 1 '{}' \;
+
+j. touch emptyFile
+
+k. chmod -r  emptyFile
+
